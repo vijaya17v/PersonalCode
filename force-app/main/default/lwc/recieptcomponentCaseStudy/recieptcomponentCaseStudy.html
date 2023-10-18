@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Reciept" >
+        <template if:true= {datas}>
+        <lightning-datatable key-field="Id" data={datas} columns={columnsList}>
+          
+        </lightning-datatable>
+    </template>
+      </lightning-card> 
+</template>

@@ -1,0 +1,10 @@
+<template>
+  <lightning-card title="Product" >
+    <template if:true= {datas}>
+    <lightning-datatable key-field="Id" data={datas} columns={columnsList}>
+      
+    </lightning-datatable>
+    <lightning-button variant="brand" label="Add to Line Item"  onclick={handleClick}></lightning-button>
+</template>
+  </lightning-card>
+</template>

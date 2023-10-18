@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title ="Rating">
+    
+        <lightning-combobox
+                name="Rating"
+                label="Select Rating"
+                value={val}
+                onchange={handleChange}
+                options={options}
+                 >
+             </lightning-combobox>
+    
+        <p>Selected value is: {val}</p>
+        <template if:true={AccountDetails}>
+<template for:each={AccountDetails}  for:item="ac" >
+    <div key = {ac.Id}>
+        {ac.Name}
+        {ac.Rating}
+    </div>
+</template> 
+</template>
+</lightning-card>
+</template>

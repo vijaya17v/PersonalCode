@@ -1,0 +1,29 @@
+<template>
+   <lightning-card>
+    <div class="slds-var-m-around_medium">
+   <!--<lightning-datatable
+    key-field="Id"
+    columns={columnsList}
+    data={accList}
+    show-row-number-column="true"
+    hide-checkbox-column="true"
+     row-number-offset ="5"
+     max-row-selection="1"
+     onrowselection={handleSelect}>
+  </lightning-datatable>--> 
+  <!--<lightning-button variant="brand" label="Get Select rows"  onclick={handleClick}></lightning-button>
+  <lightning-datatable
+    key-field="Id"
+    columns={columnsList}
+    data={accountList}
+     onrowaction={handleRowAction}
+     onsave={handleSave}
+     draft-values={saveDraftValues}
+     >
+   </lightning-datatable> editable records updated-->
+<c-custom-data-table key-field="Id" data={data} columns={columnsList}>
+  
+</c-custom-data-table>
+ </div>
+   </lightning-card> 
+</template>

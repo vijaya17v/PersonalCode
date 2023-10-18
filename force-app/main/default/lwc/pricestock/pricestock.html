@@ -1,0 +1,21 @@
+<template>
+    <div class="myStyle">
+    <div>
+        <lightning-input type="number" name="input" label="Enter a number" onchange={handleChange}  ></lightning-input> 
+ </div>
+
+ <template if:true={isAvail}>
+ Stock Available
+ 
+    <div>
+        {product.name}<br/>
+        {product.price}<br/>
+        {product.stock}<br/>
+    </div>
+ </template>
+ 
+ <template if:false={isAvail}>
+ No Stock Available
+ </template>
+</div>
+</template>

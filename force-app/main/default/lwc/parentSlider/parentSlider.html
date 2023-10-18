@@ -1,0 +1,20 @@
+<template>
+ <lightning-card title="Parent child communication">
+    hello
+    <!--<template for:each={employees} for:item="employee">
+<div key ={employee.id}>
+        <c-child-slider employee = {employee} slidervalue = {slidervalue}>
+
+        </c-child-slider> 
+    </div>
+    </template>-->
+    <lightning-input label="Enter the SliderValue" onchange={handleChange}></lightning-input>
+    
+    <c-child-slider employee = {employee}  slidervalue = {slidervalue}>
+
+    </c-child-slider> 
+    <div slot="actions">
+ <lightning-button  label="Reset" onclick={handleClick}></lightning-button>
+    </div>
+ </lightning-card>  
+</template>

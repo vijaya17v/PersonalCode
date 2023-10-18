@@ -1,0 +1,24 @@
+<template>
+    <lightning-card  title="Fields">
+        
+        <!-- <template for:each={fieldInfo} for:item="fieldInf">
+            <div key = {fieldInf}>
+                {fieldInf}  
+            </div>
+           </template>-->
+           <div>
+           <template for:each={informa} for:item="cfieldInf">
+            <div key = {cfieldInf}>
+                {cfieldInf} <br/> 
+            </div>
+           </template>
+        </div>
+        <div>
+            <template for:each={pickvalue} for:item="pval">
+             <div key = {pval}>
+                 {pval} <br/> 
+             </div>
+            </template>
+         </div>
+    </lightning-card>
+</template>

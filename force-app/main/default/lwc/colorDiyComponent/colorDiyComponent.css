@@ -1,0 +1,16 @@
+.myblueStyle {
+    background-color: white;
+    color: blue;
+    font-style:italic;
+  }
+  .myredStyle {
+    background-color: white;
+    color: red;
+    font-style:normal;
+  }
+
+.mygreenStyle {
+    background-color: white;
+    color: green;
+    font-style:oblique;
+  }

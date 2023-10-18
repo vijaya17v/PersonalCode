@@ -1,0 +1,18 @@
+<template>
+    <lightning-card  title = "lwc-APEX">
+        <div class = "slds-var-m-around_medium">
+      <template if:true ={accountList}>
+        <template for:each={accountList} for:item="acc">
+            <div class = "slds-box slds-var-m-around_medium " key={acc.id}>
+           <p>{acc.Name}</p> 
+           <p>{acc.AnnualRevenue}</p>
+           
+            </div>
+            
+        </template>
+      </template>
+  
+        </div>
+
+    </lightning-card>
+</template>

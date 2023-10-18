@@ -1,0 +1,21 @@
+
+    <template>
+      <lightning-card  title="Demo">
+      <div class="myStyle">
+            <lightning-input type="number" name="input" label="Enter a number" onchange={handleChange}  ></lightning-input> 
+            <lightning-button variant="brand" label="enter" title="Primary action" onclick={handleClick} class="lds-var-m-left_x-small"></lightning-button>
+       <template if:true = {isMaxSal}>
+          <template for:each={empl} for:item="emp">
+            <div  key = {emp.name}>
+                {emp.name}<br/>
+                {emp.Position}<br/>
+                {emp.salary}<br/>
+            </div>
+         </template>
+       </template>
+     <template if:false = {isMaxSal}>
+      Salary is less than user entered
+     </template>
+    </div>
+  </lightning-card>
+ </template>

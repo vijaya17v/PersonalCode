@@ -1,0 +1,21 @@
+<template>
+   <lightning-card>
+    <div>
+        <lightning-button variant="brand" label="get Accounts"  onclick={handleClick}></lightning-button>
+    <template for:each = {accountsList} for:item ="acc">
+        <div class = "slds-var-m-around_medium" key = {acc.Id}>
+       <p> Name: {acc.Name} </p>
+       <p> Rating: {acc.Rating}</p>
+       <lightning-button variant="brand" label="Delete" name={acc.Id} onclick={handleDelete}>
+
+       </lightning-button>
+    </div>
+    </template>
+     </div>
+    <div class = "slds-var-m-around_medium">
+       <lightning-input type="text" variant="standard" name="lastName" label="lastName" onchange={handleChange}></lightning-input>
+       <lightning-input type="text" variant="standard" name="mobilePhone" label="mobile" onchange={handleChange}></lightning-input>
+    <lightning-button variant="brand" label="createContact"  onclick={createClick}></lightning-button>
+    </div>
+</lightning-card>
+</template>

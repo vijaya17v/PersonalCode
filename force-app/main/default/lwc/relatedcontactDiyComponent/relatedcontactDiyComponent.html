@@ -1,0 +1,13 @@
+<template>
+  <lightning-card title="Related Contact">
+    <template if:true={val}>
+        <template for:each={val}  for:item="va">
+            <div key ={va.id}>
+                {va.LastName}
+                {va.MobilePhone}
+            </div>
+        </template>
+    </template>
+  </lightning-card> 
+ 
+</template>

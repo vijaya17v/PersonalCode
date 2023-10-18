@@ -1,0 +1,39 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card  title="Hello">
+        
+
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size= "12">
+                    <ul class = "slds-has-dividers_around-space">
+                        <template for:each={Todos} for:item="todo">
+                            <li class="slds-item" key = {todo.id} >
+                              <lightning-layout vertical-align = "center" 
+                              horizontal-align="spread">
+                            <lightning-layout-item padding = "horizontal-small">
+                                {todo.label}
+                            </lightning-layout-item>
+                            <lightning-button-icon icon-name="utility:delete"  variant="brand" alternative-text="Delete" name={todo.id}  title="Delete"  onclick={handleRemove}>
+
+                            </lightning-button-icon>
+                        
+                            </lightning-layout> 
+                            </li> 
+                            </template>
+                    </ul>
+                </lightning-layout-item>
+            </lightning-layout>
+       
+         <!--   <template for:each={Todos} for:item="todo"  >
+                <div key = {todo.id}>
+                   {todo.label}
+               </div>
+               <div key = {todo.id}> <lightning-button-icon icon-name="utility:delete"  variant="brand" alternative-text="Delete" name={todo.id}  title="Delete"  onclick={handleRemove}></lightning-button-icon></div>
+            </template>-->
+       
+        <p slot="footer">
+            <lightning-input type="text" label="Enter Task"  onchange={handleChange}></lightning-input> 
+            <lightning-button variant="brand" label="Add" title="Primary action" onclick={handleClick} class="lds-var-m-left_x-small"></lightning-button>
+        </p>
+    </lightning-card> 
+</template>

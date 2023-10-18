@@ -1,0 +1,15 @@
+<template>
+    <template if:true={industryOptions}>
+    <lightning-combobox
+            name="Industry"
+            label="Select Industry"
+            value={value}
+           
+            options={industryOptions}
+            onchange={handleChange} >
+        
+        </lightning-combobox>
+
+    <p>Selected value is: {value}</p>
+</template>
+</template>

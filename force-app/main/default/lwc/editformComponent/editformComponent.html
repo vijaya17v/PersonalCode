@@ -1,0 +1,41 @@
+<template>
+ <lightning-card title="Data Binding">
+ <!--   <lightning-record-view-form object-api-name="Account" record-id="0018d00000eLv6HAAS">
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_6-of-12">
+          <lightning-output-field field-name="Name">
+          </lightning-output-field>
+          <lightning-output-field field-name="Industry">
+        </lightning-output-field>
+        <lightning-output-field field-name="Phone">
+        </lightning-output-field>
+            </div>
+            <div class="slds-col slds-size_6-of-12">
+                <lightning-output-field field-name="AnnualRevenue">
+                </lightning-output-field>
+            </div>
+        </div>
+    </lightning-record-view-form>-->
+    
+    <lightning-record-edit-form object-api-name="Account" record-id="0018d00000eM1rtAAC" onsuccess={successHandler} onsubmit={submitHandler} onerror={errorHandler}>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_6-of-12">
+          <lightning-input-field field-name={fieldList.nameField}>
+          </lightning-input-field>
+          <lightning-input-field field-name={fieldList.industryField}>
+        </lightning-input-field>
+        <lightning-input-field field-name={fieldList.phoneField}>
+        </lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_6-of-12">
+                <lightning-input-field field-name={fieldList.annualRevenueField} class="Revenue">
+                </lightning-input-field>
+            </div>
+            
+        </div>
+        <lightning-button label="Submit" type="submit"></lightning-button>
+        <lightning-button label="Cancel" type="reset"></lightning-button>
+    </lightning-record-edit-form>
+   
+ </lightning-card>   
+</template>

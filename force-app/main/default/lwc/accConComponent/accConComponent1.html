@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title ="Account"  >
+        <lightning-record-form object-api-name={objectName}
+        fields={fieldList} onsuccess={handleToast}>
+        </lightning-record-form>
+        <lightning-button label="Back" variant="Brand" onclick={handleClick}></lightning-button>
+       </lightning-card>
+      </template>

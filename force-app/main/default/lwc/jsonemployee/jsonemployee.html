@@ -1,0 +1,52 @@
+<template>
+  <lightning-card  title="Demo">
+  hello
+<lightning-button variant="brand" label="enter" title="Primary action" onclick={handleClick} class="lds-var-m-left_x-small"></lightning-button>
+<lightning-layout  multiple-rows>
+    <lightning-layout-item padding="around-small" size= "10">
+        <ul class = "slds-has-dividers_around-space">
+<template for:each={empdet} for:item="empl" >
+    <li class="slds-item" key = {empl.Name}>
+        <lightning-layout vertical-align = "center" 
+                              horizontal-align="spread">
+      <lightning-layout-item padding = "horizontal-small">
+       <img src= {empl.Photo} lwc:dom = "manual"></img><br/>
+        {empl.Name}<br/>
+     </lightning-layout-item>
+</lightning-layout> 
+    </li>
+</template>
+</ul>
+</lightning-layout-item>
+</lightning-layout>
+<p slot="footer">
+    <lightning-input type="text" label="Search Name"  onchange={handleChange}></lightning-input> 
+    <lightning-button variant="brand" label="Search" title="Primary action" onclick={handleSearchClick} class="lds-var-m-left_x-small"></lightning-button>
+    <template if:true={isAvailable}>
+    <div>
+        <template for:each={searchName} for:item="sName" >
+            <div key = {sName.Name}>
+                {sName.Name}<br/>
+                <img src= {sName.Photo} lwc:dom = "manual"></img> 
+            </div>
+        </template>
+        <template if:false={isAvailable}>
+            No Name Matched
+        </template>
+   </div>
+   
+    </template>
+</p>
+<div>
+ <lightning-button variant="brand" label="Displ" title="Primary action" onclick={handleDispClick} class="lds-var-m-left_x-small"></lightning-button>
+<lightning-button variant="brand" label="Next" title="Primary action" onclick={handleNextClick} class="next"></lightning-button>
+<lightning-button variant="brand" label="Prev" title="Primary action" onclick={handlePrevClick} class="prev"></lightning-button>
+</div><br/>
+<div>
+<img src= {Pic} lwc:dom = "manual"></img><br/>
+
+    Name  : {Nam}<br/>
+    Email : {Mail}<br/>
+</div>
+</lightning-card>
+</template>

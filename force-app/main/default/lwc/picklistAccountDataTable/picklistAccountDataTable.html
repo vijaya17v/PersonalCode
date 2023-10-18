@@ -1,0 +1,14 @@
+<template>
+  <template lwc:if={accountList}>
+  <c-custom-data-table key-field="Id" data={accountList} columns={columnsList}
+  onvalueselect={handleSelection}
+                    draft-values={draftValues} 
+                    oncellchange={handleCellChange}
+                    onsave={handleSave}
+                    oncancel={handleCancel}
+                    hide-checkbox-column>
+
+  </c-custom-data-table>  
+      
+</template>
+</template>

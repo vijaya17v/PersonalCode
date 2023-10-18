@@ -1,0 +1,28 @@
+<template >
+  <lightning-card  title="Demo">
+  <div class = "myStyle">
+     <div>
+      <h2>Input1</h2> 
+      <lightning-input type="number" name="input1" label="Enter a number" onchange={handleChange1} value={num1} ></lightning-input> <br/>
+      <h2>Input2</h2>
+      <lightning-input type="number" name="input2" label="Enter a number" onchange={handleChange2} value={num2}></lightning-input>
+    </div>
+    <div> <br/></div>
+    <div>
+      <lightning-button variant="brand" label="Add" title="Primary action" onclick={handleClickAdd} class="lds-var-m-left_x-small"></lightning-button>
+      <div class="space"> </div>
+      <lightning-button variant="brand" label="Sub" title="Primary action" onclick={handleClickSub} class="lds-var-m-left_x-small"></lightning-button>
+      <div class="space"> </div>
+      <lightning-button variant="brand" label="Mul" title="Primary action" onclick={handleClickMul} class="lds-var-m-left_x-small"></lightning-button>
+      <div class="space"> </div>
+      <lightning-button variant="brand" label="Div" title="Primary action" onclick={handleClickDiv} class="lds-var-m-left_x-small"></lightning-button>
+      <div class="space"> </div>
+      <lightning-button variant="brand" label="Clear" title="Primary action" onclick={handleClickClear} class="lds-var-m-left_x-small"></lightning-button>  
+    </div>
+
+    <div class="lds-var-m-vertical_medium">
+      <p>Answer: <span class="slds-text-heading_small">{clickedButtonAnswer}</span></p>
+  </div>
+</div>
+</lightning-card>
+</template>
